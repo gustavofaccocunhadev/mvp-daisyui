@@ -1,13 +1,220 @@
-<!DOCTYPE html>
-<html lang="">
+<!doctype html>
+<html lang="pt-BR">
   <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
+    <!-- Meta tags essenciais -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Title otimizado com palavras-chave e identificação -->
+    <title>Rick and Morty Explorer | Vue.js + DaisyUI - Gustavo Cunha Developer</title>
+
+    <!-- Meta description otimizada -->
+    <meta
+      name="description"
+      content="Aplicação Vue.js desenvolvida por Gustavo Cunha para explorar personagens de Rick and Morty. Projeto do curso Vue.js Expert com DaisyUI e API oficial."
+    />
+
+    <!-- Keywords relevantes -->
+    <meta
+      name="keywords"
+      content="Vue.js, Rick and Morty, DaisyUI, Gustavo Cunha, Vue.js Expert, API Rick and Morty, desenvolvedor frontend, portfolio"
+    />
+
+    <!-- Meta tags de autor -->
+    <meta name="author" content="Gustavo Cunha" />
+    <meta name="creator" content="Gustavo Cunha" />
+    <meta name="developer" content="Gustavo Cunha - Curso Vue.js Expert" />
+
+    <!-- Open Graph para redes sociais -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rick and Morty Explorer - Vue.js por Gustavo Cunha" />
+    <meta
+      property="og:description"
+      content="Aplicação Vue.js desenvolvida por Gustavo Cunha para explorar personagens de Rick and Morty usando DaisyUI."
+    />
+    <meta property="og:url" content="https://gustavocunha-mvp-daisyui.netlify.app/" />
+    <meta property="og:image" content="https://gustavocunha-mvp-daisyui.netlify.app/og-image.jpg" />
+    <meta property="og:image:alt" content="Rick and Morty Explorer Vue.js - Gustavo Cunha" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Gustavo Cunha - Portfolio Vue.js" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rick and Morty Explorer - Vue.js por Gustavo Cunha" />
+    <meta
+      name="twitter:description"
+      content="Projeto Vue.js + DaisyUI desenvolvido durante o curso Vue.js Expert"
+    />
+    <meta
+      name="twitter:image"
+      content="https://gustavocunha-mvp-daisyui.netlify.app/twitter-card.jpg"
+    />
+    <meta name="twitter:creator" content="@gustavocunha_dev" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://gustavocunha-mvp-daisyui.netlify.app/" />
+
+    <!-- Favicon completo -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Preconnect para APIs e recursos -->
+    <link rel="preconnect" href="https://rickandmortyapi.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="dns-prefetch" href="https://rickandmortyapi.com" />
+
+    <!-- Meta tags para robôs -->
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- Dados estruturados Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Rick and Morty Explorer",
+        "description": "Aplicação Vue.js para explorar personagens de Rick and Morty",
+        "url": "https://gustavocunha-mvp-daisyui.netlify.app",
+        "applicationCategory": "EntertainmentApplication",
+        "operatingSystem": "Web Browser",
+        "programmingLanguage": "Vue.js",
+        "author": {
+          "@type": "Person",
+          "name": "Gustavo Cunha",
+          "jobTitle": "Frontend Developer",
+          "knowsAbout": ["Vue.js", "JavaScript", "Frontend Development"]
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "BRL"
+        },
+        "educationalCredentialAwarded": "Vue.js Expert Course",
+        "teaches": ["Vue.js", "DaisyUI", "API Integration"]
+      }
+    </script>
+
+    <!-- Dados estruturados para portfolio -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Rick and Morty Explorer - Projeto Vue.js",
+        "creator": {
+          "@type": "Person",
+          "name": "Gustavo Cunha"
+        },
+        "dateCreated": "2025",
+        "description": "Projeto desenvolvido durante o curso Vue.js Expert",
+        "genre": "Web Development",
+        "inLanguage": "pt-BR",
+        "keywords": "Vue.js, DaisyUI, Rick and Morty API, Frontend"
+      }
+    </script>
+
+    <!-- Meta tags para tema e PWA -->
+    <meta name="theme-color" content="#00b4d8" />
+    <meta name="msapplication-navbutton-color" content="#00b4d8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="R&M Explorer" />
+
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="/src/main.js" as="script" />
+
+    <!-- Meta tags adicionais para SEO local/portfolio -->
+    <meta name="geo.region" content="BR" />
+    <meta name="geo.country" content="Brazil" />
+    <meta name="language" content="Portuguese" />
+
+    <!-- Link para portfolio/GitHub (se aplicável) -->
+    <link rel="author" href="https://github.com/gustavofaccocunhadev" />
   </head>
   <body>
-    <div id="app"></div>
+    <!-- Header semântico para SEO -->
+    <header style="position: absolute; left: -9999px; top: -9999px">
+      <h1>Rick and Morty Explorer - Vue.js</h1>
+      <p>
+        Desenvolvido por Gustavo Cunha utilizando Vue.js, DaisyUI e a API oficial do Rick and Morty
+      </p>
+      <p>Projeto criado durante o curso Vue.js Expert</p>
+    </header>
+
+    <!-- Navegação para acessibilidade -->
+    <nav style="position: absolute; left: -9999px; top: -9999px" aria-label="Navegação principal">
+      <ul>
+        <li><a href="#personagens">Personagens</a></li>
+        <li><a href="#buscar">Buscar</a></li>
+        <li><a href="#sobre">Sobre o Projeto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main id="app" role="main" aria-label="Rick and Morty Explorer - Aplicação Vue.js">
+      <!-- Loading placeholder para SEO -->
+      <div id="seo-content" style="display: none">
+        <h1>Rick and Morty - Explorador de Personagens</h1>
+        <h2>Projeto Vue.js + DaisyUI por Gustavo Cunha</h2>
+        <p>
+          Esta é uma aplicação interativa desenvolvida em Vue.js que permite explorar todos os
+          personagens da série animada Rick and Morty.
+        </p>
+        <p>Tecnologias utilizadas: Vue.js, DaisyUI, Tailwind CSS, Rick and Morty API</p>
+        <p>Desenvolvido por Gustavo Cunha durante o curso Vue.js Expert</p>
+      </div>
+
+      <!-- Fallback para JavaScript desabilitado -->
+      <noscript>
+        <div
+          style="
+            text-align: center;
+            padding: 2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+          "
+        >
+          <h1 style="color: #0066cc; margin-bottom: 1rem">Rick and Morty Explorer</h1>
+          <h2 style="color: #666; margin-bottom: 1.5rem">Projeto Vue.js por Gustavo Cunha</h2>
+          <p style="margin-bottom: 1rem">
+            Esta aplicação Vue.js requer JavaScript para funcionar corretamente.
+          </p>
+          <p style="margin-bottom: 1rem">
+            Desenvolvida durante o curso Vue.js Expert utilizando DaisyUI e a API oficial do Rick
+            and Morty.
+          </p>
+          <p style="color: #999">
+            Por favor, habilite o JavaScript em seu navegador para explorar os personagens.
+          </p>
+        </div>
+      </noscript>
+    </main>
+
+    <!-- Footer semântico -->
+    <footer style="position: absolute; left: -9999px; top: -9999px">
+      <p>© 2025 Gustavo Cunha - Projeto desenvolvido durante o curso Vue.js Expert</p>
+      <p>Dados fornecidos pela Rick and Morty API oficial</p>
+      <p>Tecnologias: Vue.js, DaisyUI, Tailwind CSS</p>
+    </footer>
+
+    <!-- Script principal -->
     <script type="module" src="/src/main.js"></script>
+
+    <!-- Script para remover conteúdo SEO após carregamento do Vue -->
+    <script>
+      window.addEventListener('load', function () {
+        const seoContent = document.getElementById('seo-content')
+        if (seoContent) {
+          seoContent.remove()
+        }
+      })
+    </script>
   </body>
 </html>
